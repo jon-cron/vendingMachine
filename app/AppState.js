@@ -8,6 +8,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState("values", [Value]);
 
+  money = 0;
+
   VMItems = [
     new VMItem("candybar", "🍫", 480, 2),
     new VMItem("cookie", "🍪", 240, 3),
