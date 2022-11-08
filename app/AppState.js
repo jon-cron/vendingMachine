@@ -11,10 +11,28 @@ class AppState extends EventEmitter {
   money = 0;
 
   VMItems = [
-    new VMItem("candybar", "🍫", 480, 2),
-    new VMItem("cookie", "🍪", 240, 3),
-    new VMItem("bacon", "🥓", 1000, 10),
+    new VMItem({
+      name: "candybar",
+      emoji: "🍫",
+      kcal: 480,
+      price: 2,
+    }),
+    new VMItem({
+      name: "cookie",
+      emoji: "🍪",
+      kcal: 240,
+      price: 3,
+    }),
+    new VMItem({
+      name: "bacon",
+      emoji: "🥓",
+      kcal: 1000,
+      price: 10,
+    }),
   ];
+  activeItem = null;
+  money = 0;
+  myVMItems = [];
 }
 
 export const appState = new Proxy(new AppState(), {
