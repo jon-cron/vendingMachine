@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { vmService } from "../Services/VMService.js";
 import { setHTML, setText } from "../Utils/Writer.js";
 
 export class VMController {
@@ -14,9 +15,10 @@ export class VMController {
     console.log(items);
   }
   drawWallet() {
-    let template = "";
-    let wallet = appState.money;
-    template += wallet;
-    setText("wallet", template);
+    setText("wallet", appState.money);
+  }
+  moneyController() {
+    vmService.addMoney();
+    this.drawWallet();
   }
 }
