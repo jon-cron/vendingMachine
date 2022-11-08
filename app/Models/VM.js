@@ -7,7 +7,7 @@ export class VMItem {
   }
 
   get ListTemplate() {
-    return `<div class="col-6 col-md-2 text-center btn m-1" onclick="app.vmController.setActive('${this.name}')">
+    return `<div class="col-3 col-md-2 text-center btn m-1" onclick="app.vmController.setActive('${this.name}')">
     <h1>${this.emoji}</h1>
     <h2>${this.name}</h2>
     <h6>Kcal: ${this.kcal}</h6>
@@ -15,7 +15,7 @@ export class VMItem {
   </div>`;
   }
   get MyItemsTemplate() {
-    return `<div class="col-6 col-md-2 text-center btn m-1">
+    return `<div class="col-3 col-md-2 text-center btn m-1">
     <h1>${this.emoji}</h1>
     <h2>${this.name}</h2>
     <h6>Kcal: ${this.kcal}</h6>

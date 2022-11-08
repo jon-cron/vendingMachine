@@ -29,6 +29,18 @@ class AppState extends EventEmitter {
       kcal: 1000,
       price: 10,
     }),
+    new VMItem({
+      name: "sushi",
+      emoji: "🍣",
+      kcal: 10000,
+      price: 1,
+    }),
+    new VMItem({
+      name: "carrot",
+      emoji: "🥕",
+      kcal: 5,
+      price: 25,
+    }),
   ];
   activeItem = null;
   money = 0;
